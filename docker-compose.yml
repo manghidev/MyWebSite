@@ -1,0 +1,11 @@
+services:
+  project:
+    build:
+      context: .
+      dockerfile: dockerfile
+    init: true
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/home
+    restart: unless-stopped
