@@ -1,0 +1,32 @@
+{
+    "card1": {
+        "greeting": "Hola, soy ",
+        "description": "Desarrollador full-stack con experiencia en el desarrollo de aplicaciones web y móviles multiplataforma."
+    },
+    "card2": {
+        "title": "Algo sobre mi...",
+        "paragraph1": "Desarrollador full-stack con más de {myExperience} años de experiencia en desarrollo de aplicaciones/software a la medida.",
+        "paragraph2": "Estas son algunas de las tecnologías que he utilizado en mis proyectos:",
+        "paragraph3": "Entre otras...",
+        "paragraph4": "Aunque tengo herramientas y tecnologías que manejo más, me gusta aprender nuevas, para mejorar mis conocimientos y utilizar lo mejor para cada proyecto."
+    },
+    "card3": {
+        "title1": "¡Traba",
+        "title2": "jemos juntos!",
+        "paragraph1": "Si tienes un proyecto, una idea que quieras llevar a cabo o simplemente quieres hablar, no dudes en contactarme."
+    },
+    "card4": {
+        "title": "Mi hora local"
+    },
+    "card5": {
+        "title": "¿En que estoy ahora?",
+        "paragraph1": "Desarrollando el software Rarínea"
+    },
+    "card7": {
+        "words": "¡Usted es maravilloso!,¡Eres fabuloso!,¡Eres increíble!,🌲,¡Usted es fantástica!,¡Eres maravilloso!,¡Eres genial!,¡Eres el mejor!,🌳,¡Eres la mejor!,¡El mejor desarrollador!,¡El mejor diseñador!,La mejor persona,¡Felicidades!,🌱,¡Encontraste el huevo de Pascua!,¡Sigan con el buen trabajo!,¡Excelente trabajo!,🌴,¡Bien hecho!"
+    },
+    "404": {
+        "title": "¡Página no encontrada!",
+        "button1": "Volver"
+    }
+}
