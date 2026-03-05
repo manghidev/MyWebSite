@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useState, useEffect } from 'react';
 
 import { SupportedLanguages } from '@/utils/i18n';
@@ -9,10 +10,6 @@ export default function LanguagePickerComponent(props: { lang: string }) {
 
     const [show, setShow] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
-
-    const reloadLang = (lang: string) => {
-        window.location.href = `/${lang}`;
-    };
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
@@ -45,10 +42,12 @@ export default function LanguagePickerComponent(props: { lang: string }) {
             <ul id="menu" className="flex justify-around py-1">
                 {
                     SupportedLanguages.map((data) => {
-                        return <li key={data.code} id={data.code} className="cursor-pointer" onClick={() => reloadLang(data.code)}>
-                            <strong className={data.code === lang ? 'myTextGradient' : 'text-light'}>{data.name} </strong>
-                            <span>{data.flag}</span>
-                        </li>;
+                        return <Link href={`/${data.code}`} key={data.code}>
+                            <li key={data.code} id={data.code} className="cursor-pointer">
+                                <strong className={data.code === lang ? 'myTextGradient' : 'text-light'}>{data.name} </strong>
+                                <span>{data.flag}</span>
+                            </li>
+                        </Link>;
                     })
                 }
             </ul>
