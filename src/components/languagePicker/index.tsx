@@ -41,7 +41,7 @@ export default function LanguagePickerComponent(props: { lang: string }) {
     }, [lastScrollY]);
 
     return (
-        <div className="fixed bottom-0 left-0 right-0 bg-dark bg-opacity-60 text-light transition-all duration-300 ease-in-out" style={{ transform: show ? 'translateY(0)' : 'translateY(100%)' }}>
+        <div className="fixed bottom-0 left-0 right-0 bg-dark dark:bg-light bg-opacity-60 text-light transition-all duration-300 ease-in-out" style={{ transform: show ? 'translateY(0)' : 'translateY(100%)' }}>
             <ul id="menu" className="flex justify-around py-1">
                 {
                     SupportedLanguages.map((data) => {

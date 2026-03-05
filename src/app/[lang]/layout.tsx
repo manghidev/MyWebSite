@@ -39,7 +39,7 @@ export default async function RootLayout({
       <head>
         <meta name="google-adsense-account" content="ca-pub-4108962150005369" />
       </head>
-      <body className={`text-back dark:text-light bg-light dark:bg-dark ${JetBrainsMono.className} antialiased`} >
+      <body className={`text-[#0D1117] dark:text-[#F8F8F8] bg-[#F8F8F8] dark:bg-[#0D1117] ${JetBrainsMono.className} antialiased`} >
         <SnowComponent months={[1, 11, 12]} particleNumberByMonthPosition={[50, 100, 450]} idChristmasHat="personalDescription" />
 
         {children}

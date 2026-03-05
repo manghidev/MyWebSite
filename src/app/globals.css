@@ -1,23 +1,73 @@
+
 @import "tailwindcss";
+
+:root {
+  --color-mango1: #EF9A25;
+  --color-mango2: #A92723;
+  --color-mango3: #EF9B25C5;
+  --color-mango4: #E75D24;
+}
 
 @layer components {
   .myTextGradient {
-    @apply bg-clip-text bg-linear-to-r from-mango1 from-35% via-mango4 via-65% to-mango2 to-100% text-transparent;
+    background: linear-gradient(90deg,
+      var(--color-mango1) 35%,
+      var(--color-mango4) 65%,
+      var(--color-mango2) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
   }
 
   .mtTextGradientReverse {
-    @apply bg-clip-text bg-linear-to-r from-mango2 from-35% via-mango4 via-65% to-mango1 to-100% text-transparent;
+    background: linear-gradient(90deg,
+      var(--color-mango2) 35%,
+      var(--color-mango4) 65%,
+      var(--color-mango1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
   }
 
   .card {
-    @apply transition-all border-2 border-gray-700 p-5 hover:border-mango1 rounded-xl duration-400;
+    transition: all 400ms;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #374151; /* gray-700 */
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+  }
+  .card:hover {
+    border-color: var(--color-mango1);
   }
 
   .center {
-    @apply flex justify-center items-center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .socialButton {
-    @apply text-xl transition-all hover:translate-x-1 hover:translate-y-1 duration-500 text-dark dark:text-light px-5 py-2 border border-mango1 bg-transparent cursor-pointer rounded-xl hover:border-gray-600;
+    font-size: 1.25rem;
+    transition: all 500ms;
+    color: var(--color-dark);
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--color-mango1);
+    background: transparent;
+    cursor: pointer;
+    border-radius: 0.75rem;
+  }
+  .socialButton:hover {
+    transform: translateX(0.25rem) translateY(0.25rem);
+    border-color: #4B5563; /* gray-600 */
   }
 }

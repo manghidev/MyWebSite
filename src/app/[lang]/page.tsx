@@ -20,20 +20,18 @@ export default async function HomePage({ params }: {
   const t = await getDictionary(lang);
 
   return (
-    <>
-      <main className="h-screen md:center py-0">
-        <div className="select-none font-bold grid grid-cols-12 lg:grid-cols-[repeat(4,minmax(0,300px))] gap-4 lg:grid-rows-[repeat(8,minmax(0,60px))] p-5 lg:p-0">
-          <Cart1Component {...{ t }} />
-          <Cart2Component {...{ t }} />
-          <Cart3Component {...{ t }} />
-          <Cart4Component {...{ t }} />
-          <Cart5Component {...{ t }} />
-          <Cart6Component />
-          <Cart7Component {...{ t }} />
-          <Cart8Component />
-          <LanguagePickerComponent {...{ lang }} />
-        </div>
-      </main>
-    </>
+    <main className="min-h-screen flex flex-col md:justify-center md:items-center py-0 overflow-y-auto md:overflow-visible">
+      <div className="select-none font-bold grid grid-cols-12 lg:grid-cols-[repeat(4,minmax(0,300px))] gap-4 lg:grid-rows-[repeat(8,minmax(0,60px))] p-5 lg:p-0 w-full max-w-7xl">
+        <Cart1Component {...{ t }} />
+        <Cart2Component {...{ t }} />
+        <Cart3Component {...{ t }} />
+        <Cart4Component {...{ t }} />
+        <Cart5Component {...{ t }} />
+        <Cart6Component />
+        <Cart7Component {...{ t }} />
+        <Cart8Component />
+        <LanguagePickerComponent {...{ lang }} />
+      </div>
+    </main>
   );
 }
