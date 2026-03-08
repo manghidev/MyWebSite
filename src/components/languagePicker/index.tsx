@@ -42,12 +42,12 @@ export default function LanguagePickerComponent(props: { lang: string }) {
             <ul id="menu" className="flex justify-around py-1">
                 {
                     SupportedLanguages.map((data) => {
-                        return <Link href={`/${data.code}`} key={data.code}>
-                            <li key={data.code} id={data.code} className="cursor-pointer">
+                        return <li key={data.code} id={data.code} className="cursor-pointer">
+                            <Link href={`/${data.code}`}>
                                 <strong className={data.code === lang ? 'myTextGradient' : 'text-light'}>{data.name} </strong>
                                 <span>{data.flag}</span>
-                            </li>
-                        </Link>;
+                            </Link>
+                        </li>;
                     })
                 }
             </ul>
