@@ -32,7 +32,7 @@ export const proxy = (request: NextRequest) => {
 export const config = {
     matcher: [
         //* Skip all internal paths (_next)
-        "/((?!api|_next/static|_next/image|img/|favicon.ico).*)",
+        "/((?!api|_next/static|_next/image|img/|favicon.ico|robots.txt).*)",
         //* Optional: only run on root (/) URL
         //* '/'
     ],
